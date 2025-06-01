@@ -1,0 +1,70 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello Chat App</title>
+    <link rel="stylesheet" href="public/style.css">
+</head>
+<body>
+    <section class="chat_section">
+        <div class="brand">
+           <img height="40px" src="/brand.png" alt="">
+        </div>
+        <div class="chat_container">
+
+        </div>
+        <div class="t_area">
+            <textarea name="" id="textarea" cols="50" rows="10" placeholder="Type your message here..."></textarea>
+        </div>
+        <div class="chat_footer">
+            <p>&copy; 2025 Hello Chat App</p>
+        </div>
+    </section>
+    <script src="socket.io/socket.io.js"></script>
+    <script src="public/script.js"></script>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hello Chat App</title>
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+</head>
+<body>
+    <section class="chat_section">
+        <div class="brand">
+            <img height="40px" src="/brand.png" alt="Hello Chat Logo" />
+            <span>Hello Chat</span>
+        </div>
+
+        <div class="chat_container" id="chatContainer">
+            <!-- Chat messages will be dynamically appended here -->
+        </div>
+
+        <div class="t_area">
+            <label for="textarea" class="visually-hidden">Type your message</label>
+            <textarea
+                id="textarea"
+                name="message"
+                cols="50"
+                rows="3"
+                placeholder="Type your message here..."
+            ></textarea>
+            <button id="sendBtn">Send</button>
+        </div>
+
+        <div class="chat_footer">
+            <p>&copy; 2025 Hello Chat App</p>
+        </div>
+    </section>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/script.js"></script>
+</body>
+</html>
