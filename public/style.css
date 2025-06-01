@@ -1,48 +1,3 @@
-/* *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
-}
-body{
-    background-color: #f0f0f0;
-    color: #333;
-}
-header{
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
-    text-align: center;
-}
-h1{
-    font-size: 2em;
-    margin-bottom: 10px;
-}
-.incoming-message, .outgoing-message {
-    padding: 10px;
-    margin: 10px 0;
-    border-radius: 5px;
-}
-.incoming-message {
-    background-color: #4bbcca;
-    border-left: 5px solid #00796b;
-}
-.outgoing-message {
-    background-color: #7a5e31;
-    border-right: 5px solid #ff9800;
-}
-.message-content {
-    font-size: 1em;
-    line-height: 1.5;
-}
-.message-time {
-    font-size: 0.8em;
-    color: #666;
-    margin-top: 5px;
-} */
-
-
-
 
 
 /* Reset default styles and set base font */
@@ -56,6 +11,7 @@ h1{
 /* Body background and centering */
 body {
     background-color: #f0f0f0;
+    /* background-color: #4CAF50; */
     color: #333;
     display: flex;
     justify-content: center;
@@ -66,6 +22,7 @@ body {
 /* Main chat container */
 .chat_section {
     background: #ffffff;
+    /* background-color: #4CAF50; */
     width: 90%;
     max-width: 600px;
     height: 90vh;
@@ -82,7 +39,9 @@ body {
     align-items: center;
     gap: 10px;
     padding: 15px 20px;
-    background-color: #4CAF50;
+    /* background-color: #4CAF50; */
+    background-color: #00796b;
+    border-bottom: 1px solid #ddd;
     color: white;
     font-size: 1.2rem;
     font-weight: bold;
@@ -96,6 +55,12 @@ body {
     padding: 15px;
     overflow-y: auto;
     background-color: #fff;
+    /* background-color: #4CAF50; */
+     background-image: url("chat.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
 }
 
 /* Message styling */
@@ -157,7 +122,8 @@ textarea {
 /* Send button */
 #sendBtn {
     padding: 10px 15px;
-    background-color: #4CAF50;
+    /* background-color: #4CAF50; */
+        background-color: #00796b;
     color: white;
     border: none;
     border-radius: 5px;
@@ -185,4 +151,74 @@ textarea {
     width: 1px;
     height: 1px;
     overflow: hidden;
+}
+
+/* Image upload label styled as a clickable icon */
+.image-label {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: #4CAF50; */
+        background-color: #00796b;
+    color: white;
+    font-size: 1.5rem;
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    cursor: pointer;
+    user-select: none;
+    transition: background-color 0.3s ease;
+}
+
+.image-label:hover {
+    background-color: #45a049;
+}
+
+/* Hide the native file input */
+#imageInput {
+    display: none;
+}
+
+
+
+/* ------------- */
+
+
+.image-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.8);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.image-modal img {
+  max-width: 90vw;
+  max-height: 80vh;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.modal-close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 3rem;
+  color: white;
+  cursor: pointer;
+}
+
+.modal-download {
+  padding: 10px 20px;
+  background: #4caf50;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
 }

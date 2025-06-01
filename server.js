@@ -32,9 +32,13 @@
 import express from 'express'
 import http from 'http'
 import { Server } from 'socket.io'
+import dotenv from 'dotenv';
+dotenv.config(); // Load environment variables from .env file
+
 
 const app = express()
 const PORT = process.env.PORT || 3000
+// const PORT = process.env.PORT || 5000;
 
 // Serve static files from "public"
 app.use(express.static('public'))
@@ -61,6 +65,8 @@ io.on('connection', (socket) => {
   socket.on('disconnect', () => {
     console.log('A user disconnected')
   })
+  
+  
 })
 
 // Start server
